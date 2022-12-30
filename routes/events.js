@@ -2,8 +2,9 @@
 // host + /api/events
 const { Router } = require('express');
 const router = Router();
-const { validateJWT } = require('../middlewares/jwtValidator');
 const { check } = require('express-validator');
+
+const { validateJWT } = require('../middlewares/jwtValidator');
 const { validateFields } = require('../middlewares/fieldsValidator');
 const { isDate } = require('../helpers/isDateValidator');
 const { createEvent, getEvents, updateEvent, deleteEvent } = require('../controllers/events');
@@ -24,7 +25,16 @@ router.post(
 
 router.get('/', getEvents);
 
-router.put('/:id', updateEvent);
+router.put(
+  '/:id',
+  [
+    check('title', 'Title is necessary').not().isEmpty(),
+    check('start', 'Start date is not valid').custom(isDate),
+    check('end', 'End date is not valid').custom(isDate),
+    validateFields,
+  ],
+  updateEvent
+);
 
 router.delete('/:id', deleteEvent);
 
