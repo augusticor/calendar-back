@@ -27,7 +27,8 @@ const createEvent = async (req = request, res = response) => {
 
 const getEvents = async (req = request, res = response) => {
   try {
-    const events = await Event.find().populate('user', 'name');
+    const userId = req.uid;
+    const events = await Event.find({ user: userId }).populate('user', 'name');
 
     return res.status(200).json({
       ok: true,
@@ -70,7 +71,9 @@ const updateEvent = async (req = request, res = response) => {
       user: uid,
     };
 
-    const updatedEvent = await Event.findByIdAndUpdate(eventId, updatedEventInfo, { new: true });
+    const updatedEvent = await Event.findByIdAndUpdate(eventId, updatedEventInfo, {
+      new: true,
+    });
 
     // ok
     return res.status(200).json({
