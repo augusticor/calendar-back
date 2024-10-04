@@ -47,7 +47,7 @@ Check the frontend code and tech stack at [Calendar Front github repository](htt
 
 1. Rename the [.env.template](.env.template) file to ***.env*** and prepare to complete the info.
 2. In the *.env* file, set the **PORT** your app will be running and the **SECRET_JWT_SEED** that will be used to sign and verify the json web tokens, it can be any string, the longer the string, the better.
-4. Get the connection string for [mongoDB](https://www.mongodb.com/) database. Check [docs](https://www.mongodb.com/blog/post/quick-start-nodejs-mongodb-how-to-get-connected-to-your-database) 📆.
+4. Get the connection string for [mongoDB](https://www.mongodb.com/) database. Check [docs](https://www.mongodb.com/blog/post/quick-start-nodejs-mongodb-how-to-get-connected-to-your-database).
 5. Run the app:
    - Local mode: Run the command [npm run dev](#npm-run-dev).
    - Production mode: Configure the deployment host to run [npm run start](#npm-run-start).
