@@ -10,7 +10,7 @@ You are the only admin of ***your*** events, being able to:
 - [x] Delete events
 - [ ] View other people events (now only private events from march 2023)
 
-Visit the **deployed** app at **[Calendar App](https://calendarappa.up.railway.app/auth/login)**
+Visit the **deployed** app at **[Calendar App](https://calendar-back-leti.onrender.com/auth/login)**
 
 Check the frontend code and tech stack at [Calendar Front github repository](https://github.com/augusticor/calendar-front#readme)
 
@@ -32,7 +32,7 @@ This project was created using the M.E.R.N. stack that stands for MongoDB, Expre
 - **Web Api framework -** [express.js](https://expressjs.com/)
 - **Database -** [mongoDB](https://www.mongodb.com/)
 - **Cloud database -** [mongoatlas](https://www.mongodb.com/atlas/database)
-- **Continuous Deployment -** [Railway](https://railway.app/)
+- **Continuous Deployment -** [Render.com](https://render.com/)
 - **Main programming languaje -** [javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ##### Dependencies
